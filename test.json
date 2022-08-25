@@ -1,12 +1,22 @@
 [
     {
-    "Name":"Arad Koluok",
-    "Contact":"Mom",
-    "Email":"44arad44@gmail.com",
-    "Hobbies":[
-        "sport",
-        "reading",
-        "programming"
-    ]
-}
+        "Name":"Arad Koluok",
+        "Contact":"Mom",
+        "Email":"44arad44@gmail.com",
+        "Hobbies":[
+            "sport",
+            "reading",
+            "programming"
+        ]
+    },
+    {
+        "Name":"Liran Koluok",
+        "Contact":"Arad",
+        "Email":"LiranKoluok1@gmail.com",
+        "Hobbies":[
+            "sport",
+            "reading",
+            "programming"
+        ]
+    }
 ]
