@@ -1,18 +1,16 @@
 import os
+import sys
 from os.path import isfile, join
 
-#directoryPath = sys[1]
-directoryPath = "D:\\"
-stringToComperWith = "arad"
+directoryPath = sys[1]
+stringToComperWith = sys[2]
 filesWithSameString = []
 
-def main():
-    filesInDir = getTxtFilesFromDir(directoryPath)
-    
-    filesWithSameString = getTxtFilesFromDir(directoryPath,"arad")
-            
-    arad = "arad"
-    print(f"{arad}\\\\a")
+def main():    
+    filesWithSameString = getTxtFilesFromDir(directoryPath)
+    files = getTxtFilesWithChoosenString(filesWithSameString , stringToComperWith)
+    for file in files:
+        print(f"{directoryPath}\{file}")
 
 def getTxtFilesFromDir(dirPath):
     files = []
@@ -27,11 +25,10 @@ def getTxtFilesWithChoosenString(files, sen):
     for file in files:
         with open(directoryPath + "\\" + file) as newFile:
             text = newFile.read()
-            if text.__contains__(sen):
+            if sen in text:
                 newFiles.append(file)
             newFile.close()
 
-
-    return files
+    return newFiles
 
 main()
